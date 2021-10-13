@@ -3,12 +3,13 @@ using System.Threading.Tasks;
 using System.Linq;
 using Manager.Infra.Interfaces;
 using Manager.Infra.Context;
-using Microsoft.Domain.Entities;
+using Manager.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Manager.Infra.Repositories
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : Base;
+    public class BaseRepository<T> : IBaseRepository<T> where T : Base
+    {
         private readonly ManagerContext _context;
 
         public BaseRepository(ManagerContext context)
@@ -19,15 +20,14 @@ namespace Manager.Infra.Repositories
         public virtual async Task<T> Create(T obj)
         {
             _context.Add(obj);
-            await _context.SaveChangeAsync();
-
+            await _context.SaveChangesAsync();
             return obj;
         }
 
         public virtual async Task<T> Update(T obj)
         {
             _context.Entry(obj).State = EntityState.Modified;
-            await _context.SaveChangeAsync();
+            await _context.SaveChangesAsync();
 
             return obj;
         }
@@ -39,13 +39,13 @@ namespace Manager.Infra.Repositories
             if(obj != null)
             {
                 _context.Remove(obj);
-                await _context.SaveChangeAsync();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public virtual async Task Get(long id)
+        public virtual async Task<T> Get(long id)
         {
-            var obj = await _context.Ser<T>()
+            var obj = await _context.Set<T>()
                 .AsNoTracking()
                 .Where(x => x.Id == id)
                 .ToListAsync();
@@ -53,10 +53,11 @@ namespace Manager.Infra.Repositories
             return obj.FirstOrDefault();
         }
 
-        public virtual async Task<List<T>> GetTask()
+        public virtual async Task<List<T>> Get()
         {
             return await _context.Set<T>()
-                    .AsNoTracking()
-                    .ToListAsync();
+                .AsNoTracking()
+                .ToListAsync();
         }
+    }
 }

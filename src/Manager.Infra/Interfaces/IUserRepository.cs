@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Manager.Domain.Entities;
 
 namespace Manager.Infra.Interfaces
 {
@@ -9,10 +10,7 @@ namespace Manager.Infra.Interfaces
 
         Task<List<User>> SearchByEmail(string email);
 
-        
         Task<List<User>> SearchByName(string name);
-
-
+        
     }
-
 }
