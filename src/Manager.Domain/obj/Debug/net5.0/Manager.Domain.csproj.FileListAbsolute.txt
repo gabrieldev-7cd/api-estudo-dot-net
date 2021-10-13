@@ -1,0 +1,12 @@
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\obj\Debug\net5.0\Manager.Domain.csproj.AssemblyReference.cache
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\obj\Debug\net5.0\Manager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\obj\Debug\net5.0\Manager.Domain.AssemblyInfoInputs.cache
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\obj\Debug\net5.0\Manager.Domain.AssemblyInfo.cs
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\obj\Debug\net5.0\Manager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\bin\Debug\net5.0\Manager.Domain.deps.json
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\bin\Debug\net5.0\Manager.Domain.dll
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\bin\Debug\net5.0\ref\Manager.Domain.dll
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\bin\Debug\net5.0\Manager.Domain.pdb
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\obj\Debug\net5.0\Manager.Domain.dll
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\obj\Debug\net5.0\ref\Manager.Domain.dll
+C:\Users\gabriel\Documents\CODE_ARCHS\dotnet\src\Manager.Domain\obj\Debug\net5.0\Manager.Domain.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Domain\\Manager.Domain.csproj": {}
+    "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Core\\Manager.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Domain\\Manager.Domain.csproj": {
+    "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Core\\Manager.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Domain\\Manager.Domain.csproj",
-        "projectName": "Manager.Domain",
-        "projectPath": "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Domain\\Manager.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Core\\Manager.Core.csproj",
+        "projectName": "Manager.Core",
+        "projectPath": "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Core\\Manager.Core.csproj",
         "packagesPath": "C:\\Users\\gabriel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Domain\\obj\\",
+        "outputPath": "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "fluentvalidation": {
-              "target": "Package",
-              "version": "[10.3.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
