@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4Uw02HiXn9psrYcR6hKHfGkHmRfCm++PcsdMbFSFd5/wj79XFt+8xCiE+TwyOMJ+cko2ZKkGkwlBLvxbr7RUyw==",
+  "dgSpecHash": "HNisdusxArp7D+hXkIi9EMIw76dwFojcU8+TF17AOKhydYtsS/5G085/+C+MMKqpj8NXEQIpzQcMxK9RrEzOIA==",
   "success": true,
   "projectFilePath": "C:\\Users\\gabriel\\Documents\\CODE_ARCHS\\dotnet\\src\\Manager.Services\\Manager.Services.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gabriel\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\gabriel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\gabriel\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -7,7 +7,6 @@ namespace Manager.Domain.Entities
 {
     public class User : Base
     {
-        
         public string Name { get; private set; }        
         public string Email { get; private set; }
         public string Password { get; private set; }
@@ -21,6 +20,8 @@ namespace Manager.Domain.Entities
             Email = email;
             Password = password;
             _errors = new List<string>();
+            
+            Validate();
         }
 
         public void ChangeName(string name)
