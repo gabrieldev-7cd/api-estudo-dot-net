@@ -31,7 +31,6 @@ namespace Manager.Services.Services
 
             var userCreated = await _userRepository.Create(user);
             return _mapper.Map<UserDTO>(userCreated);
-
         }
         
         public async Task<UserDTO> Update(UserDTO userDTO)
