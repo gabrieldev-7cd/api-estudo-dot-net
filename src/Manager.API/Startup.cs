@@ -12,6 +12,17 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using Manager.Services.Interfaces;
+using Manager.Services.Services;
+using Manager.Infra.Interfaces;
+using Manager.Infra.Repositories;
+using AutoMapper;
+using Manager.Domain.Entities;
+using Manager.Services.DTO;
+using Manager.API.ViewModels;
+using Manager.Infra.Context;
+using Microsoft.EntityFrameworkCore;
+
 namespace Manager.API
 {
     public class Startup
@@ -26,8 +37,25 @@ namespace Manager.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            
             services.AddControllers();
+            
+            #region AutoMapper
+            var autoMapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<User, UserDTO>().ReverseMap();
+                cfg.CreateMap<CreateUserViewModel, UserDTO>().ReverseMap();
+            });
+            services.AddSingleton(autoMapperConfig.CreateMapper());
+            #endregion
+
+            #region DI
+            services.AddSingleton(d => Configuration);
+            services.AddDbContext<ManagerContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:USER_MANAGER"]), ServiceLifetime.Transient);
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            #endregion
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Manager.API", Version = "v1" });
