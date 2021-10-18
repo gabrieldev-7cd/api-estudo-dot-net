@@ -14,7 +14,7 @@ namespace Manager.Infra.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=172.22.16.1,1433;Initial Catalog=USERMANAGERAPI;User ID=SA;Password=senhasql!123");
+            optionsBuilder.UseSqlServer(@"Data Source=172.20.128.1,1433;Initial Catalog=USERMANAGERAPI;User ID=SA;Password=senhasql!123");
         }
 
         public virtual DbSet<User> User {get; set;}
