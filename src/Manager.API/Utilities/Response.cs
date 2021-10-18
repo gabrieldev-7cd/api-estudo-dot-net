@@ -26,11 +26,11 @@ namespace Manager.API.utilities
             };
         }
 
-        public static ResultViewModel DomainErrorMessage(string message, List<string> errors)
+        public static ResultViewModel DomainErrorMessage(string message,  IReadOnlyCollection<string> errors)
         {
             return new ResultViewModel 
             {
-                Message = "A combinação de login e senha está incorreta!",
+                Message = message,
                 Success = false,
                 Data = errors
             };
@@ -45,7 +45,6 @@ namespace Manager.API.utilities
                 Success = false,
                 Data = null
             };
-
         }
     }
 }

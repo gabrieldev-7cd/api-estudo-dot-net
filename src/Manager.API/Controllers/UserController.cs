@@ -6,6 +6,7 @@ using Manager.API.ViewModels;
 using Manager.Core.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Manager.Services.Interfaces;
+using Manager.API.utilities;
 
 namespace Manager.API.Controllers
 {
@@ -39,12 +40,12 @@ namespace Manager.API.Controllers
             
             catch(DomainException ex)
             {
-                return BadRequest();
+                return BadRequest(Responses.DomainErrorMessage(ex.Message, ex.Errors));
             }
             
             catch(Exception)
             {
-                return StatusCode(500, "Erro");
+                return StatusCode(500, Responses.ApplicationErrorMessage());
             }
         }
     }
